@@ -48,16 +48,16 @@ Checklist for iOS developer before submitting app to AppStore.
     
 ## In-App Purchases
   * Enable IAPs for your app id in developer.app.com
-  ![app id on developer.apple.com](pics/developer.apple.com-ids.png =600x)
+  <img src="pics/developer.apple.com-ids.png" width="600"/>
   
   * Enable IAPs in Xcode Build Settings
-  ![app id on developer.apple.com](pics/xcode-apns.png =600x)
+  <img src="pics/xcode-apns.png" width="600"/>
   
   * Submit finance docs (without doing it, app doesn't receive even list of in-apps) in iTunesConnect:
-  ![iTunesConnect notification message](pics/apns-finance-error.png =600x)
+  <img src="pics/apns-finance-error.png" width="600"/>
   
-  * Make sure, that if you've hardcoded IAPs IDs, they are the same in iTunes  Connect app too.  
-  ![iTunesConnect IAPs](pics/itunesconnect-IAPs.png =600x)
+  * Make sure, that if you've hardcoded IAPs IDs, they are the same in iTunes  Connect app too. 
+  <img src="pics/itunesconnect-IAPs.png" width="600"/>
   
   * In-apps are displaying correctly. Test user can make purchases.
   * In-apps are submitted for review! Otherwise in-apps won't be available even if app version was reviewed.
@@ -75,16 +75,16 @@ Checklist for iOS developer before submitting app to AppStore.
   ```
   
   Parse.com application keys
-  ![parse.com keys](pics/parse-keys.png =600x)
+  <img src="pics/parse-keys.png" width="600"/>
   Keys should be the same in Settings and AppDelegate.
   
   
   * Deploy Cloud code to production account!
   * Parse application is marked as 'PROD' in Settings
-  ![parse.com settings](pics/parse-production-mode.png =600x)
+  <img src="pics/parse-production-mode.png" width="600"/>
   
   * If you're using APNS, set production certificate in Settings 
-  ![parse.com apns](pics/parse-apns.png =600x)
+  <img src="pics/parse-apns.png" width="600"/>
   
   
 ### Facebook
