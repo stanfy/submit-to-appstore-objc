@@ -5,40 +5,40 @@ Checklist for iOS developer before submitting app to AppStore.
 
 ## iTunesConnect & developer.apple.com
   * Install publisher's provision profile (containing private key p12).
-  * Install distribution certificate containing your app BundleID.
-  * Prepare app in iTunesConnect with your app's BundleID. 
-  * Provide description and l10ns for all relevant languages.
-  * Provide screenshosts/videos in iTunesConnect.
+  * Install distribution certificate containing your app's BundleID.
+  * Prepare app in iTunesConnect for your app's BundleID. 
+     * Provide description and l10ns for all relevant languages.
+     * Provide screenshosts/videos in iTunesConnect.
   
   
 ## APNS
-  * APNS certificate inclued your app's BundleID.
+  * APNS certificate includes your app's BundleID.
   * You have created distribution APNS certificate.
   * Your server is using distribution APNS certificate.
-  * Check that pushes are working on different iOS versions (pay attention on **iOS8** where API was changed).
+  * Check that notifications are working on different iOS versions (pay attention on **iOS8** where API was changed).
   
 
 ## Versioning
   * Do not hardcode anywhere in sources things like `isBeta=YES` or `DEBUG=YES`.
-  * App icon & name doesn't contain `beta` word.
+  * Make sure that app icon or name doesn't contain `beta` word.
   
-  * Update app version and build version. And never harcode it inside app (use CFBundleVersion instead).
+  * Update app version and build version. Never harcode version inside app (use CFBundleVersion instead).
   
-  * **IMPORTANT** Check that new release is installed on old version in correct way. 
-    * Install app from AppStore. Create ad-hoc build and install it over.
-    * Check that data from NSUserDefaults is read in correct way (app doesn't crash trying to read unexisting keys).
-    * Check that user won't lose any his info after update.  
+  * **IMPORTANT**  Make sure that new release is installed over old version in correct way. 
+    * Install app from AppStore. Create ad-hoc build and install it over old version.
+      * Check that data from NSUserDefaults is read in correct way (app doesn't crash trying to read unexisting keys).
+      * Check that user doesn't lose any his info after update.  
   
   
 ## Server
   * Connect application to production server environment. 
   * Do not send `beta=1` (or similar) in any server requests.
-  * If app uses server configurated data, it's updating in correct way. If configuration needs to be updated every N hours - it's really updates.
+  * If app is configurated from server (downloads DB f.e.), make sure that configuration is updated in correct way. If configuration needs to be updated every N hours - it really does.
     
     
 ## Tools
-  * Enable [Crashlytics](https://crashlytics.com).
-  * Enable analytics like [Flurry](http://www.flurry.com/).
+  * Enable crash analytics tool like [Crashlytics](https://crashlytics.com).
+  * Enable flow analytics tool like [Flurry](http://www.flurry.com/).
   * Disable `NSLog` calls. At least like this
   
   ``` objective-c
