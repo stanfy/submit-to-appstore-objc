@@ -8,11 +8,12 @@ Checklist for iOS developer before submitting app to AppStore.
   * Install distribution certificate containing your app's BundleID.
   * Prepare app in iTunesConnect for your app's BundleID. 
      * Provide description and l10ns for all relevant languages.
-     * Provide screenshosts/videos in iTunesConnect.
+     * Provide screenshots/videos in iTunesConnect.
+          
   
   
 ## APNS
-  * APNS certificate includes your app's BundleID.
+  * Make sure that APNS certificate includes your app's BundleID.
   * You have created distribution APNS certificate.
   * Your server is using distribution APNS certificate.
   * Check that notifications are working on different iOS versions (pay attention on **iOS8** where API was changed).
@@ -26,14 +27,14 @@ Checklist for iOS developer before submitting app to AppStore.
   
   * **IMPORTANT**  Make sure that new release is installed over old version in correct way. 
     * Install app from AppStore. Create ad-hoc build and install it over old version.
-      * Check that data from NSUserDefaults is read in correct way (app doesn't crash trying to read unexisting keys).
-      * Check that user doesn't lose any his info after update.  
+    * Check that data from NSUserDefaults is read in correct way (app doesn't crash trying to read unexisting keys).
+    * Check that user doesn't lose any his info after update.  
   
   
 ## Server
   * Connect application to production server environment. 
   * Do not send `beta=1` (or similar) in any server requests.
-  * If app is configurated from server (downloads DB f.e.), make sure that configuration is updated in correct way. If configuration needs to be updated every N hours - it really does.
+  * If app is configurated from server (for example, it downloads DB), make sure that configuration is updated in correct way. If configuration needs to be updated every N hours - it really does.
     
     
 ## Tools
@@ -91,3 +92,15 @@ Checklist for iOS developer before submitting app to AppStore.
   * Make sure, that you are using production app, check client key and perform successful login/sharing to Fb.
   * Disable Sandbox mode for Fb app.
   * If you are using GraphStory, send them to review, describe steps-to-reproduce and add necessary screenshots.
+  
+
+## Apple docs
+Also, you can find useful Apple guides:
+
+* Common App Rejections
+ 
+  https://developer.apple.com/app-store/review/rejections/
+
+* App Review Guidelines
+
+  https://developer.apple.com/app-store/review/guidelines/
