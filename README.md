@@ -25,10 +25,22 @@ Checklist for iOS developer before submitting app to AppStore.
   
   * Update app version and build version. Never harcode version inside app (use CFBundleVersion instead).
   
-  * **IMPORTANT**  Make sure that new release is installed over old version in correct way. 
+  
+## Version compatibility  
+  * Make sure that new release is installed over old version in correct way: 
     * Install app from AppStore. Create ad-hoc build and install it over old version.
-    * Check that data from NSUserDefaults is read in correct way (app doesn't crash trying to read unexisting keys).
-    * Check that user doesn't lose any his info after update.  
+    * Check that user doesn't lose any his info after update. 
+    
+      
+  * Check that data from **NSUserDefaults** is read in correct way: 
+    * app doesn't crash trying to read unexisting keys
+    * your haven't changed keys in `initWithCoder` and `encodeWithCoder` (your current app should be able to read data saved by old app)
+    
+    
+## iOS SDK API updates:
+  * check that geolocation is working ([iOS8 SDK](http://stackoverflow.com/a/24063578))
+  * check that local notifications are wokring (iOS8 SDK)
+  * push notifications should work too =)	
   
   
 ## Server
@@ -90,9 +102,16 @@ Checklist for iOS developer before submitting app to AppStore.
   
 ### Facebook
   * Make sure, that you are using production app, check client key and perform successful login/sharing to Fb.
-  * Disable Sandbox mode for Fb app.
-  * If you are using GraphStory, send them to review, describe steps-to-reproduce and add necessary screenshots.
+  * Disable **Sandbox** mode for Fb app.
+  * If you are using GraphStory, submit them to review, describe steps-to-reproduce and add necessary screenshots.
   
+  
+## App extensions (widgets)
+  * Create separate bundle ID. Usuall it looks like `com.company.appName.widgetName`. 
+  * Generate distribution mobile provisions for widget
+  * Make sure that `app groups` are included in both provisions: host app and extension.
+  * Check that widget is using production server URL / production Parse keys. 
+
 
 ## Apple docs
 Also, you can find useful Apple guides:
