@@ -104,6 +104,7 @@ Checklist for iOS developer before submitting app to AppStore.
   * Make sure, that you are using production app, check client key and perform successful login/sharing to Fb.
   * Disable **Sandbox** mode for Fb app.
   * If you are using GraphStory, submit them to review, describe steps-to-reproduce and add necessary screenshots.
+  * If you're using `FBSDKAppInviteContent`, make sure that invitation link is pointing to PROD application
   
   
 ## App extensions (widgets)
