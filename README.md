@@ -89,7 +89,9 @@ Checklist for iOS developer before submitting app to AppStore.
   ```
   
   Parse.com application keys
+  
   <img src="pics/parse-keys.png" width="600"/>
+  
   Keys should be the same in Settings and AppDelegate.
   
   
